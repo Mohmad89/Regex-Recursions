@@ -5,17 +5,23 @@
 /* Write a function that take a string and return true if the string only contain uppercase and lowercase
 characters (no numbers and symbols) and it should end with capital A else return false */
 
-function capitalA(s){
-    // Add your logic.
-    return;
+function capitalA(s) {
+    let letterNumber = /[-+_!@#$%^&*., ?][0-9]*/g;
+    if (s.match(letterNumber)) {
+        return true;
+    } else {
+        return false;
+    }
+
 }
+
 
 
 /* Write a function that take a string and return true if the the sting is following the emails pattern
 which end with io (example@example.io) */
 
-function ioEmail(email){
-    // Add your logic.
+function ioEmail(email) {
+    let regex = /@/g;
     return;
 }
 
@@ -26,14 +32,14 @@ required extention are jpg, jpeg and png.
 
 */
 
-function imagesSearcher(text){
+function imagesSearcher(text) {
     let arr = [];
     // Add your logic.
     return arr
 }
 
 
-describe("Test capitalA", ()=>{
+describe("Test capitalA", () => {
     test("It should return true if the input has uppercase and lowercase characters (no numbers and symbols) and it should end with capital A else return false ", () => {
         expect(capitalA("Hello world A")).toStrictEqual(true);
 
